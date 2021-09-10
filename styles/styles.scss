@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+// ### Primary
+$pri-color: hsl(223, 87%, 63%);
+// ### Secondary
+$scd-color1: hsl(223, 100%, 88%);
+$scd-color2: hsl(354, 100%, 66%);
+// ### Neutral
+$neu-color1: hsl(0, 0%, 59%);
+$neu-color2: hsl(209, 33%, 12%);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+    font-size: 11px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 516px;
+  margin: 3rem auto;
+  align-items: center;
+  .logo {
+    width: 80px;
+    margin-bottom: 2rem;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+    span {
+      font-size: inherit;
+      color: hsl(0, 0%, 59%);
+      font-weight: 400;
+    }
+  }
+  .sub-title {
+    font-size: 0.85rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+  .input {
+    width: 100%;
+    &__form {
+      display: flex;
+      width: 100%;
+    }
+    .col1 {
+    }
+    .col2 {
+      margin-left: auto;
+    }
+    .warning-mb {
+      max-height: 0;
+      overflow: hidden;
+      color: #d80000;
+      font-size: 0.6rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      transform: translateX(22px) translateY(8px);
+    }
+
+    input {
+      border: 1.5px solid rgba(0, 0, 0, 0.1);
+      border-radius: 1rem;
+      line-height: 1.85rem;
+      font-size: 0.6rem;
+      padding: 0 1rem;
+      width: 320px;
+      &.red {
+        // JS thêm class vào HTML
+        border: 1.5px solid #d8000085;
+      }
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &__btn {
+      background-color: hsl(223, 87%, 63%);
+      border: none;
+      border-radius: 1rem;
+      padding: 0px 2rem;
+      font-size: 0.6rem;
+      color: white;
+      transition: 0.1s;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 1.9rem;
+      box-shadow: 0.5px 0.5px 4px #4f7df3;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .illu {
+    width: 100%;
+    margin: 3.5rem 0;
+  }
+  .sc {
+    display: flex;
+    margin-bottom: 1rem;
+    &__item {
+      color: $pri-color;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      border: 0.5px solid $pri-color;
+      border-radius: 1rem;
+      padding: 5px;
+      margin: 0 4px;
+      line-height: 12px;
+      cursor: pointer;
+      transition: 0.1s;
+      &:hover {
+        background: $pri-color;
+        color: white;
+      }
+      i {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  .cpr {
+    font-size: 0.5rem;
+    color: $neu-color1;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 85%;
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .input {
+      &__form {
+        flex-direction: column;
+      }
+      input {
+        width: 90%;
+        margin-bottom: 0.5rem;
+      }
+      &__btn {
+        line-height: 1.9rem;
+        width: 100%;
+      }
+      .col2 {
+        margin: 0;
+      }
+      .warning-mb {
+        // max-height: 20vh;
+        text-align: center;
+        transform: none;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
